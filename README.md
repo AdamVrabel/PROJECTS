@@ -6,7 +6,7 @@
 [`SMAT1`](#LINK_SEM)    [`UMZI`](#LINK_SEM)     [`IVZDEL`](#LINK_SEM)        [`MIP`](#LINK_SEM)      [`ZMTMO`](#LINK_SEM)   [`ZPRPR1`](C)
 
 [`2. SEMESTER`](#2-semester) | 
-[`SMAT2`](#LINK_SEM)    [`UMA`](#LINK_SEM)     [`ZPS`](#LINK_SEM)        [`ZTIAPL`](#LINK_SEM)      [`ZPRPR2`](#LINK_SEM)
+[`SMAT2`](#LINK_SEM)    [`UMA`](#LINK_SEM)     [`ZPS`](#LINK_SEM)        [`ZTIAPL`](#LINK_SEM)      [`ZPRPR2`](C)
 
 [`3. SEMESTER`](#3-semester) | 
 [`AJ1`](#LINK_SEM)    [`ADM`](#LINK_SEM)    [`MA`](#LINK_SEM)    [`PPI`](#LINK_SEM)    [`ZOOP`](#LINK_SEM)    
