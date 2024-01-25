@@ -1,0 +1,28 @@
+HODNOTENIE:
+
+PLUSY:
+spoľahlivosť, výkon
+operačný systém iOS, intuitívnosť, kvalita
+spoľahlivá a rýchla kompatibilita s APPLE zariadeniami a príslušenstvom
+Face ID (funguje rýchlo a spoľahlivo za svetla aj za tmy)
+Bezdrôtové nabíjanie, rýchle NVMe úložisko
+Design, padne do ruky
+Bezdrôtové nabíjanie, rýchle NVMe úložisko
+Foťák, stabilizácia, lepšia výdrž batérie oproti starším modelom
+
+MINUSY:
+vysoká cena
+v balení bez adaptéra (originál 20W adapter cca 25€)
+Cena, v balení bez adaptéra (iba kábel)
+
+HODNOTENIE OD ĽUDÍ:
+
+	AUTOR: 	Adam Vrabeľ
+	PLUS: 	Toto je plus, ktorý som pridal
+	MINUS: 	Toto je mínus, ktorý som pridal
+
+
+	AUTOR: 	Adam
+	PLUS: 	Toto je plus
+	MINUS: 	Toto minus
+

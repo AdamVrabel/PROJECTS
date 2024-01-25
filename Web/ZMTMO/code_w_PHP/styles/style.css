@@ -1,0 +1,1552 @@
+*, *:after, *:before {
+	box-sizing: border-box;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+/* FARBA OZNAČENIA NA STRÁNKE*/
+::-moz-selection { 
+    color: #121926;
+    background: #c4d5e4;
+}
+::selection { 
+    color: #121926;
+    background: #c4d5e4;
+}
+html{
+    font-family: 'Open Sans', sans-serif;
+
+    font-size: 16px;
+    width: 100%;
+}
+body{
+    width: 100%;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+p{
+    font-size: 18px;
+}
+.container-fluid-nav{
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    background-color: black;
+}
+.container-fluid{
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+}
+.container-fluid-color{
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+
+    background-color: #E0E0E0;
+}
+.hidden{
+    display: none;
+}
+
+section{
+    /* šírka */
+    width: 80%;
+    /* padding: 0 100px; */
+}
+/* NAVIGACIA */
+.navigacia{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    color: white;
+
+    text-transform: uppercase;
+    font-size: 16px;
+
+    /* šírka */
+    width: 90%;
+    /* padding: 0 100px; */
+}
+
+.navigacia #logo{
+    width: 150px;
+
+    margin: 36px 20px 50px 20px;
+}
+.navigacia nav{
+    display: flex;
+    gap: 15px;
+}
+nav a{
+    text-decoration: none;
+    color: white;    
+
+    transition: all .4s ease;
+}
+nav a:hover{
+    transform: scale(1.1);
+    font-weight: 600;
+    margin: 0 10px;
+}
+
+/* NAVIGACIA ZMENA JAZYKA */
+.language{
+    display: flex;
+    
+    background-color: white;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.language a{
+    color: inherit;
+    margin: 0;
+}
+.language a:first-child:after{
+    content:" /";
+    margin-right: 5px;
+}
+.language .active{
+    font-weight: bold;
+}
+
+/* FIRST SECTION */
+.first{
+    display: flex;
+    align-items: flex-end;
+
+}
+.first h1{
+    font-size: 50px;
+    font-weight: 900;
+
+    padding-bottom: 30px;
+}
+.first .content{
+    margin-bottom: 35px;
+}
+.first p{
+    font-size: 18px;
+}
+.first img{
+    width: 500px;
+    padding-top: 50px;
+    margin: 0 10% 0 5%;
+}
+.first .text{
+    width: 80%;
+    padding-bottom: 50px;
+    font-weight: 600;
+    font-style: italic;
+}
+.first .tlacidlo{
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    text-decoration: none;
+
+    background-color: black;
+    color: white;
+    font-weight: bold;
+
+    border-radius: 25px;
+    margin: 20px 0;
+}
+.first .tlacidlo a{
+    padding: 15px;
+}
+
+/* DRUHÁ SEKCIA - MINI GALÉRIA */
+.second{
+    display: flex;
+    flex-direction: column;
+
+    background-color: #E0E0E0;
+
+    padding-top: 75px;
+    padding-bottom: 50px;
+}
+.second .mini-gallery{
+    display: flex;
+    flex-wrap: wrap;
+
+    /* padding-bottom: 50px; */
+}
+.second .mini-gallery img{
+    width: 100%;
+    height: 100%;
+}
+.second .mini-gallery .wrapper{
+    margin-right: 3%;
+    margin-bottom: 3%;
+    flex: 1 0 21%;
+}
+.second .mini-gallery .wrapper:last-child{
+    margin-right: 0;
+}
+
+
+/* TRETIA SEKCIA */
+.third{
+    margin-top: 75px;
+}
+.third .nadpis{
+    text-align: center;
+
+    font-size: 40px;
+    font-weight: 600;
+    color: black;
+    
+    margin-bottom: 50px;
+}
+
+.third .obal {
+    display: flex;
+    margin-bottom: 50px;
+}
+.third .tag{
+    width: 50%;
+
+    background-color: #E0E0E0;
+    color: black;
+    text-align: center;
+
+    border-radius: 25px;
+
+    padding: 50px 5%;
+}
+.third .tag:first-child{margin-right: 15px;}
+.third .tag:last-child{margin-left: 15px;}
+
+.third .tag .header{
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-bottom: 25px;
+}
+.third .tag .text {
+    font-size: 20px;
+}
+
+/* PODSTRÁNKA TECHNICKÉ ŠPECIFIKÁCIE */
+h2{
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    
+    padding: 40px 0 30px 0;
+}
+.tech{
+    margin-bottom: 50px;
+}
+.tech .table_div{
+    display: flex;
+}
+.tech table{
+    width: 50%;
+}
+.tech table .head {
+    font-weight: bold;
+}
+
+.tech td{
+    text-align: left;
+    vertical-align: top;
+    padding-bottom: 20px;
+}
+.tech table:first-child{
+    margin-right: 30px;
+    border-right: 3px solid black;
+}
+
+
+/* SEKCIA KAMERA (PODSTRÁNKA GALERIA) */
+.gallery-first .gallery{
+    display: flex;
+    align-items: center;
+    margin: 50px 0 30px 0;
+}
+.gallery-first .gallery .inline-item{
+    display: flex;
+    flex-direction: column;
+}
+.gallery-first .gallery img{
+    width: 100%;
+    height: auto;
+}
+.gallery-first .gallery .item {
+    padding-right: 10px;
+}
+.gallery-first .gallery .item:last-child {
+    padding-right: 0;
+}
+.gallery-first p{
+    width: 90%;
+}
+
+.gallery-first .hidden{
+    display: none;
+}
+
+/* SEKCIA VIDEO (PODSTRÁNKA GALERIA) */
+.gallery-second p{
+    width: 90%;
+}
+.gallery-second .videa{
+    display: flex;
+    align-items: stretch;
+
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+}
+.gallery-second .hidden{
+    display: none;
+}
+.gallery-second .video-item{
+    width: calc(100% * (1/4));
+}
+.gallery-second video{
+    width: 100%;
+}
+
+/* PODSTRÁNKA POUŽÍVATEĽSKÉ ROZHRANIE */
+.rozhranie>p{
+    width: 100%;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+.rozhranie-first .text .nadpis{
+    text-align: left;
+}
+.rozhranie-first .text p{
+    text-align: justify;
+}
+.rozhranie-first{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 50px;
+}
+.rozh .hidden{
+    display: none;
+}
+.rozhranie-first video{
+    width: 250px;
+    margin-bottom: 50px;
+}
+.rozhranie-first video:first-child{
+    margin-right: 50px;
+}
+.rozhranie-first video:last-child{
+    margin-left: 50px;
+}
+.rozhranie-first .text p{
+    margin-bottom: 20px;
+}
+.rozhranie-first .text .nadpis{
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0 0 10px 0;
+}
+.rozhranie-ukazky{
+    background-color: #E0E0E0;
+    padding-bottom: 40px;
+}
+.rozhranie-galeria{
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+}
+.rozhranie-galeria .item{
+    /* width: calc(100% * (1/4)); */
+    width: 18%;
+}
+.rozhranie-galeria img{
+    width: 100%;
+}
+/* PODSTRÁNKA POUŽÍVATEĽSKÉ ROZHRANIE */
+/* SEKCIA ZVUKY */
+.rozhranie-zvuky{
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0;
+}
+.rozhranie-zvuky .item p{
+    font-weight: bold;
+    font-size: 20px;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid black;
+    text-align: center;
+}
+.rozhranie-zvuky .item{
+    background-color: #E0E0E0;
+    padding: 15px 25px;
+    border-radius: 25px;
+}
+.rozhranie-zvuky ul{
+    list-style-type: none;
+}
+.rozhranie-zvuky li:first-child{
+    margin-bottom: 10px;
+}
+
+/* PODSTRÁNKA POROVNANIE */
+#porovnanie_bg{
+    position: fixed;
+    z-index: -3;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #E0E0E0;
+}
+.porovnanie{
+    display: flex;
+    align-items: stretch;
+}
+/* TU MENÍM ŠIRKU LAYOUTU INAK */
+.porovnanie{
+    padding: 0;
+}
+.porovnanie .iph12{
+    padding-left: 100px!important;
+}
+.porovnanie .iph6S{
+    padding-right: 100px!important;
+}
+/* END ZMENY */
+.porovnanie .iph12,
+.porovnanie .iph6S{
+    width: 50%; 
+    padding-top: 50px;
+    padding-bottom: 75px;
+}
+.porovnanie .nadpis{
+    font-weight: bold;
+    font-size: 30px;
+
+}
+.porovnanie .iph12{
+    padding-right: 30px;
+}
+.porovnanie .iph6S{
+    padding-left: 30px;
+}
+.porovnanie .obrazky{
+    display: flex;
+    justify-content: flex-start;
+
+    padding: 30px 0;
+}
+.porovnanie img{
+    width: 160px;
+    height: auto;
+}
+.porovnanie img:first-child{
+    margin-right: 55px;
+}
+
+.porovnanie .table_div{
+    display: flex;
+}
+.porovnanie table{
+    width: 100%;
+}
+.porovnanie table .head {
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+.porovnanie td{
+    text-align: left;
+    vertical-align: top;
+    padding-bottom: 20px;
+}
+
+.porovnanie .iph6S{
+    background-color: #E0E0E0;
+}
+.porovnanie tr>td:nth-child(2){
+    width: 80%;
+}
+
+/* PODSTRÁNKA PRÍSLUŠENSTVO */
+.prislusenstvo .box{
+    display: flex;
+    flex-direction: row;
+    background-color: #E0E0E0;
+    margin-bottom: 70px;
+
+    border-radius: 55px;
+    overflow: hidden;
+}
+.prislusenstvo h3{
+    font-size: 23px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 50px 0 20px 0;
+}
+.prislusenstvo .image img{
+    width: 100%;
+    height: 100%;
+}
+.prislusenstvo .image{
+    width: 70%;
+    height: auto;
+}
+.prislusenstvo .text-wrap{
+    text-align: left;
+    padding: 0  50px;
+    padding-bottom: 30px;
+}
+.prislusenstvo .text-wrap p{
+    width: 85%;
+}
+.prislusenstvo  .flex-reverse{
+    flex-direction: row-reverse;
+    align-items: center;
+}
+.prislusenstvo  .flex-reverse .image{
+    width: 40%;
+    padding: 25px 100px 25px 0;
+}
+.prislusenstvo  .flex-reverse h3{
+    padding: 0 0 20px 0;
+}
+
+.prislusenstvo .wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.prislusenstvo .box-half{
+    width: 48%;
+    background-color: #E0E0E0;
+    text-align: center;
+    border-radius: 55px;
+}
+.prislusenstvo .box-half h3{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.prislusenstvo .box-half p{
+    margin-top: 20px;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 10%;
+}
+.prislusenstvo .galery-prislusenstvo{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 0;
+}
+.prislusenstvo .galery-prislusenstvo .photo:nth-child(1){
+    width: 20%;
+}
+.prislusenstvo .galery-prislusenstvo .photo:nth-child(2){
+    width: 50%;
+    padding: 5%;
+    /* CELKOVÁ ŠÍRKA = 60% */
+}
+.prislusenstvo .galery-prislusenstvo .photo:nth-child(2) img{
+    border-radius: 100px;
+    box-shadow: 7px 5px 16px -4px rgba(0,0,0,0.81);
+}
+.prislusenstvo .galery-prislusenstvo .photo:nth-child(3){
+    width: 20%;
+}
+/* .prislusenstvo .galery-prislusenstvo .photo{
+    width: calc(100% / 3);
+} */
+
+.prislusenstvo .galery-prislusenstvo img{
+    width: 100%;
+    height: auto;
+}
+
+
+
+/* PODSTRÁNKA HODNOTENIE */
+.hodnotenie .content{
+    display: flex;
+}
+.hodnotenie .item{
+    width: 50%;
+}
+.hodnotenie .item h3{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 27px;
+}
+.hodnotenie .polozka{
+    display: flex;
+    align-items: flex-start;
+    padding: 20px 0;
+}
+
+.hodnotenie .polozka .ikona{
+    width: 40px;
+    height: 40px;
+    margin-right: 25px;
+}
+.hodnotenie .polozka p{
+    font-size: 20px;
+}
+.hodnotenie{
+    margin-bottom: 70px;
+}
+
+.hodnotenie-formular{
+    background-color: #E0E0E0;
+    
+}
+.hodnotenie-formular .nadpis{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 50px 0;
+}
+
+/*FORMULÁR*/
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+form{
+    font-family: "DM Sans", sans-serif;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+
+    padding-bottom: 50px;
+}
+form .input{
+    display: flex;
+    position: relative;
+    margin-bottom: 1rem;
+}
+form .input-label{
+    width: 15%;
+}
+form .input-field{
+    width: 20%;
+}
+form .input .input-label{
+    color: black;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
+}
+form .input .input-field{
+    font-size: 14px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid black;
+}
+form .input .input-field:active{
+    border: none;
+}
+form .input .input-field:checked{
+    border: none;
+}
+
+form input[type=submit],
+.submit{
+    background-color: black;
+    color: white;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+
+    padding: 16px 0;
+    margin-top: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-align: center;
+    width: 150px;
+    border-radius: 15px;
+}
+
+/*PODSTRÁNKA KONTAKT*/
+.kontakt{
+    background-color: #E0E0E0;
+
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding-bottom: 50px;
+}
+.kontakt .formular,
+.kontakt .whoiam{
+    width: 48%;
+}
+.kontakt form .input-label{
+    width: 30%;
+}
+.kontakt form .input-field{
+    width: 40%;
+}
+.kontakt form input[type=submit]{
+    width: 25%;
+    position: relative;
+}
+
+.kontakt .whoiam .iam{
+    display: flex;
+}
+.kontakt .whoiam .iam .image{
+    width: 30%;
+}
+.kontakt .whoiam .iam .text{
+    width: 65%;
+
+    margin-left: 5%;
+}
+.kontakt .whoiam .iam .image img{
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+.kontakt .whoiam .iam .text .nadpis{
+    font-size: 38px;
+    font-weight: bold;
+
+    margin-bottom: 5px;
+}
+.kontakt .whoiam .iam .text .small{
+    font-size: 22px;
+    font-weight: 300;
+    font-style: italic;
+
+    margin-bottom: 50px;
+}
+.kontakt .whoiam .iam .text .email{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* FOOTER */
+footer{
+    width: 80%;
+    font-size: 16px;
+}
+footer ul{
+    list-style: none;
+}
+footer .container{
+    width: 100%;
+    background-color: #E0E0E0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 60px;
+    padding-bottom: 30px;
+}
+footer .container .f-item{
+    width: 30%;
+}
+footer .container .f-item p{
+    font-size: 14px;
+    font-weight: 400;
+}
+footer .container .f-nav{
+    width: 50%; 
+}
+footer .container .f-item{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    font-style: italic;
+}
+footer .container .f-item .odkazy ul{
+    display: flex;
+    gap: 20px;
+}
+footer .container .f-item .odkazy li{
+    width: 30px;
+}
+footer .container .f-item .odkazy a{
+    text-decoration: none;
+    width: 100%;
+    height: auto;
+
+}
+footer img{
+    width: 100%;
+    height: auto;
+    color: black;
+}
+footer .f-nav .mini-nav{
+    width: 100%;
+}
+footer .f-nav ul{
+    display: flex;
+    font-size: 12px;
+    text-transform: uppercase;
+    justify-content: space-between;
+
+    gap: 10px;
+    flex-direction: column;
+    text-align: right;
+}
+footer .f-nav a{
+    transition: all .2s;
+}
+footer .f-nav a:hover{
+    font-weight: bold;
+    
+}
+
+
+footer .author{
+    background-color: #E0E0E0;
+    text-align: center;
+    font-weight: 400;
+    padding: 20px 0;
+    font-size: 12px;
+    font-style: italic;
+}
+.white,
+.white .container,
+.white .author{
+    background-color: white;
+}
+
+
+@media (max-width:1523px){
+    .first .tlacidlo{
+        width: 45%;
+    }
+}
+
+@media (max-width: 1492px){
+    /* INDEX.HTML */
+    .navigacia{
+        flex-direction: column;
+    }
+    .navigacia nav{
+        margin-bottom: 55px;
+    }
+    .language{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    .first .text{
+        padding-bottom: 20px;
+    }
+
+    /* ROZHRANIE.HTML */
+    .rozh .visible{
+        display: none;
+    }
+    .rozh .hidden{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 70px;
+    }
+    .rozh .hidden .video-sec{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 70px;
+    }
+    .rozh .hidden video{
+        margin: 0;
+        width: 35%;
+    }
+    /* PRISLUSENSTVO.HTML */
+    .prislusenstvo .box .image{
+        width: 30%;
+    }
+    .prislusenstvo .box .text-wrap{
+        width: 70%;
+    }
+    .prislusenstvo .text-wrap p{
+        width: 100%;
+    }
+}
+@media (max-width: 1350px){
+    /* ROZHRANIE.HTML */
+    .rozhranie-zvuky{
+        width: 55%;
+        text-align: center;
+        flex-direction: column;
+    }
+    .rozhranie-zvuky .item{
+        margin-bottom: 30px;
+    }
+    .rozhranie-galeria{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2%;
+    }
+    .rozhranie-galeria .item{
+        flex: 49%;
+        padding-bottom: 15px;
+    }
+    .rozhranie-galeria .item:last-child>img{
+        width: 60%;
+    }
+    .rozhranie-galeria .item:last-child{
+        text-align: center;
+    }
+    .rozh .hidden {
+        margin-bottom: 50px;
+    }
+    .rozhranie-ukazky h2{
+        text-align: center;
+    }
+    .no-see{
+        display: none;
+    }
+
+    /* POROVNANIE.HTML */
+    .porovnanie .iph12{
+        padding-left: 0!important;
+        width: 100%;
+    }
+    .porovnanie .iph6S{
+        padding-right: 0!important;
+        width: 100%;
+    }
+    .porovnanie .table_div tr{
+        display: flex;
+        flex-direction: column;
+    }
+    .porovnanie .table_div .head{
+        padding-bottom: 0!important;
+    }
+}
+@media (max-width: 1285px){
+    /* INDEX.HTML */
+    .navigacia nav{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .first .tlacidlo{
+        text-align: center;
+    }
+    .first h1{
+        padding-bottom: 15px;
+    }
+    .first .text{
+        width: 100%;
+        padding-bottom: 10px;
+    }
+    .first .tlacidlo{
+        width: 90%;
+    }
+    
+
+    .third{
+        margin-bottom: 30px;
+    }
+    .third .tag:first-child{
+        margin: 0;
+    }
+    .third .tag:last-child{
+        margin: 0;
+    }
+    .third .obal{
+        flex-direction: column;
+        margin: 0;
+    }
+    .third .tag{
+        width: 100%;
+        margin: 15px 0!important;
+    }
+    /* HODNOTENIE.HTML */
+    .hodnotenie h2{
+        font-size: 25px;
+    }
+    .hodnotenie .item h3{
+        font-size: 22px;
+        padding-bottom: 25px;
+    }
+    .hodnotenie .polozka{
+        padding: 0;
+        padding-bottom: 20px;
+        padding-right: 30px;
+    }
+    .hodnotenie .polozka p{
+        font-size: 18px;
+        font-weight: 700;
+    }
+    .hodnotenie .polozka .ikona{
+        width: 30px;
+        height: 30px;
+        margin-right: 20px;
+    }
+    form .input .input-label{
+        width: 30%;
+    }
+    form .input .input-field{
+        width: 60%;
+    }
+    /* KONTAKT.HTML */
+    .kontakt h2{
+        font-size: 25px;
+    }
+    .kontakt .whoiam .iam .text .nadpis{
+        font-size: 25px;
+    }
+    .kontakt .whoiam .iam .text .small,
+    .kontakt .whoiam .iam .text .email{
+        font-size: 20px;
+    }
+    .kontakt .whoiam .iam .image img{
+        width: 150px;
+    }
+    .kontakt .whoiam .iam{
+        justify-content: space-between;
+    }
+    .kontakt .whoiam .iam .text{
+        width: 50%;
+        padding-right: 6%;
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 1120px){
+    /* INDEX.HTML */
+    .first img{
+        width: 400px;
+    }
+    .first h1{
+        font-size: 35px;
+        margin-top: 50px;
+    }
+    .first .text{
+        font-size: 16px;
+    }
+    .first .tlacidlo{
+        font-size: 14px;
+    }
+    .first .tlacidlo a{
+        padding: 10px;
+    }
+    .first .content{
+        margin-bottom: 20px;
+    }
+
+    .third{
+        margin-top: 50px;
+    }
+    .third .nadpis{
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+    .third .tag{
+        padding: 35px 20%;
+    }
+    .third .tag .header{
+        font-size: 20px;
+    }
+    .third .tag .text{
+        font-size: 16px;
+    }
+    /* GALERIA.HTML */
+    .gallery-first h2,
+    .gallery-second h2{
+        padding: 30px 0 15px 0;
+    }
+    .gallery-first p{
+        font-size: 16px;
+        text-align: justify;
+        width: 100%;
+    }
+    .gallery-second p{
+        font-size: 16px;
+        text-align: justify;
+        width: 100%;
+    }
+    .gallery-first .gallery{
+        margin-top: 30px;
+    }
+    .gallery-first .gallery:last-child{
+        margin-bottom: 0;
+    }
+    .gallery-second .videa{
+        margin-top: 30px;
+    }
+    /* PRISLUSENSTVO.HTML */
+    .prislusenstvo h3{
+        font-size: 20px;
+    }
+    .prislusenstvo p{
+        font-size: 16px;
+    }
+    .prislusenstvo .image img{
+        object-fit: cover;
+    }
+    .prislusenstvo h3{
+        padding: 20px 0 10px 0;
+    }
+}
+@media (max-width: 1000px){
+    /* GALERIA.HTML */
+    .gallery-first .gallery_one{
+        flex-direction: column;
+        row-gap: 5px;
+    }
+    .gallery-first .gallery_one .item{
+        padding-right: 0;
+    }
+    .gallery-first .gallery_two .item{
+        padding-right: 0;
+    }
+    .gallery-first .gallery_one .inline-item{
+        flex-direction: row;
+        gap: 10px;
+    }
+    .gallery-first .gallery_one .item:nth-child(2){
+        /* width: 50%; */
+        display: none;
+    }
+
+    .gallery-first .visible,
+    .gallery-second .visible{
+        display: none;
+    }
+    .gallery-first .gallery_two{
+        display: flex;
+        gap: 10px;
+    }
+    .gallery-first .gallery_two .item{
+        padding-bottom: 5px;
+    }
+    .gallery-second .hidden{
+        display: flex;
+    }
+    .gallery-second .hidden .video-item{
+        width: 100%;
+    }
+
+    .gallery-second .hidden .video-item:nth-child(2){
+        position: relative;
+        top: -5px;
+    }
+    
+    /* ROZHRANIE.HTML */
+    .porovnanie{
+        width: 90%;
+    }
+    .rozh .hidden video{
+        width: 45%;
+    }
+    
+    /* POROVNANIE.HTML */
+    .porovnanie .nadpis{
+        text-align: center;
+    }
+    .porovnanie .obrazky{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .porovnanie .iph12 img,
+    .porovnanie .iph6S img{
+        position: relative;
+        left: -2.5%;
+        margin-bottom: 20px;
+    }
+    .porovnanie img:first-child{
+        margin-right: 0;
+    }
+
+    .porovnanie .table_div .head{
+        padding-right: 0;
+    }
+    .porovnanie .table_div tr{
+        align-items: center;
+        text-align: center;
+    }
+    .porovnanie .table_div td{
+        text-align: center;
+    }
+    .porovnanie .iph12{
+        padding-right: 5%;
+    }
+    .porovnanie .iph6S{
+        padding-left: 5%;
+    }
+    /* PRISLUSENSTVO.HTML */
+    .prislusenstvo p{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 900px){
+    /* INDEX.HTML */
+    .first img{
+        width: 40%;
+    }
+    .second .mini-gallery{
+        flex-direction: column;
+        padding-bottom: 0;
+    }
+    .second .mini-gallery:last-child{
+        padding-bottom: 30px;
+    }
+    .second .mini-gallery .wrapper{
+        flex: 1 0 31%;
+    }
+    
+    .mini-gallery-visible{
+        display: flex!important;
+        flex-direction: row!important;
+        justify-content: space-between;
+    }
+
+    h2{
+        font-size: 25px;
+    }
+    /* TECHNICKE_SPECIFIKACIE.HTML */
+    .tech .table_div{
+        flex-direction: column;
+    }
+    .tech .table_div table{
+        width: 100%;
+    }
+    .tech table:first-child{
+        margin-right: 0;
+        border: none;
+    }
+    .tech .table_div table .head{
+        width: 25%;
+        padding-right: 2%;
+    }
+    /* POROVNANIE.HTML */
+    .porovnanie .nadpis{
+        font-size: 25px;
+    }
+    /* PRISLUSENSTVO.HTML */
+    .prislusenstvo h2{
+        font-size: 25px;
+    }
+    /* KONTAKT.HTML */
+    .kontakt{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+    }
+    .kontakt .formular, .kontakt .whoiam{
+        width: 100%;
+    }
+    .kontakt .whoiam .iam .image{
+        width: 25%;
+    }
+    .kontakt .whoiam .iam .image img{
+        width: 100%;
+    }
+    .kontakt .whoiam .iam .text{
+        width: 100%;
+    }
+    .kontakt .whoiam .iam{
+        justify-content: flex-start;
+    }
+    form{
+        padding-bottom: 20px;
+    }
+
+    .kontakt .whoiam .iam .text .small{
+        margin-bottom: 20px;
+    }
+
+}
+@media (max-width: 845px){
+    /* TECHNICKE_SPECIFIKACIE.HTML */
+    .tech .table_div table tr{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 15px;
+    }
+    .tech .table_div table td{
+        padding: 0;
+    }
+
+    /* ROZHRANIE.HTML */
+    .rozh .hidden{
+        flex-direction: column-reverse;
+        margin-bottom: 20px;
+    }
+    .rozh .hidden .video-sec{
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+    .rozh .hidden video{
+        width: 80%;
+        padding-bottom: 30px;
+        align-self: center;
+    }
+    /* PRISLUSENSTVO.HTML */
+    .prislusenstvo .flex-reverse h3{
+        padding: 50px 0 20px 0;
+    }
+    .prislusenstvo .flex-reverse .image{
+        padding: 5px 50px 5px 0;
+    }
+}
+
+@media (max-width: 700px){
+    /* INDEX.HTML */
+    .first{
+        flex-direction: column-reverse;
+        text-align: center;
+        justify-content: center;
+    }
+    .first img{
+        width: 60%;
+        padding: 0;
+        margin: 0 auto;
+        position: relative;
+        left: 30px;
+    }
+    .first .content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .first .tlacidlo{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .first .tlacidlo:first{
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+    .first .tlacidlo:last-child{
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+    .second .mini-gallery_second{
+        flex-direction: column!important;
+    }
+
+    /* GALERIA.HTML */
+    .gallery-first .gallery_one .inline-item{
+        flex-direction: column;
+        gap: 0;
+    }
+    .gallery-first .gallery_one .inline-item a:last-child{
+        position: relative;
+        top: -7px;
+    }
+    
+    /* ROZHRANIE.HTML */
+    .rozhranie-galeria .item{
+        flex: 100%;
+    }
+    .rozhranie-galeria .item:last-child>img{
+        width: 100%;
+    }
+    .rozhranie-zvuky{
+        width: 80%;
+    }
+    .porovnanie tr>td:nth-child(2) {
+        font-size: 14px;
+    }
+    /* PRISLUSENSTVO.HTML */
+    .prislusenstvo .first_box{
+        align-items: center;
+        flex-direction: column-reverse;
+        padding-bottom: 30px;
+    }
+    .prislusenstvo .first_box .text-wrap{
+        width: 100%;
+    }
+    .prislusenstvo .first_box .image{
+        width: 60%;
+    }
+    .prislusenstvo .first_box .image img{
+        border-radius: 25px;
+    }
+    .prislusenstvo .wrapper{
+        flex-direction: column;
+    }
+    .prislusenstvo .box-half {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    .prislusenstvo h3{
+        padding: 35px 0 10px 0;
+    }
+    /* HODNOTENIE.HTML */
+    .hodnotenie .content{
+        display: flex;
+        flex-direction: column;
+    }
+    .hodnotenie .item{
+        width: 100%;
+    }
+    .hodnotenie .polozka{
+        padding-right: 0;
+    }
+    .hodnotenie .content .item:nth-child(2){
+        padding-top: 30px;
+    }
+    .hodnotenie-formular .nadpis{
+        padding: 30px 0;
+    }
+    /* KONTAKT.HTML */
+    .kontakt .whoiam .iam .image{
+        width: 150px;
+    }
+
+}
+@media (max-width: 500px){
+    /* GALERIA.HTML */
+    .gallery-first .gallery_two{
+        flex-direction: column;
+        gap: 0;
+    }
+    .gallery-first .gallery_two a img{
+        position: relative;
+        top: -7px;
+    }
+    .gallery-second .hidden{
+        flex-direction: column;
+    }
+    .gallery-second .hidden .help{
+        position: relative;
+        top: -14px;
+    }
+    
+    /* ROZHRANIE.HTML */
+    .rozhranie-zvuky audio{
+        width: 100%;
+    }
+    /* ROZHRANIE.HTML */
+    .porovnanie .obrazky{
+        justify-content: center;
+        width: 70%;
+    }
+    .porovnanie img{
+        width: 100%;
+    }
+    .porovnanie .iph12 img,
+    .porovnanie .iph6S img{
+        left: 12.5%;
+    }
+    /* KONTAKT.HTML */
+}
+
+
+/* CONTENT HOVER */
+.first .tlacidlo{
+    transition: .6s;
+}
+.first .tlacidlo:hover{
+    transform: scale(110%);
+}
+
+.second img{
+    transition: .5s;
+}
+.second img:hover{
+    transform: scale(105%);
+}
+
+.rozhranie-galeria img, .submit,
+.kontakt form input[type=submit]{
+    transition: .5s;
+}
+.rozhranie-galeria img:hover,
+.submit:hover,
+.kontakt form input[type=submit]:hover{
+    transform: scale(105%);
+}
+
+.gallery-first img{
+    transition: .3s;
+}
+.gallery-first img:hover{
+    transform: scale(103%);
+}
+
+/* ANIMÁCIE */
+footer .container .f-item .odkazy li{
+    animation: animacia 2s ease infinite;
+}
+footer .container .f-item .odkazy li:nth-child(2){
+    animation: animacia-reverse 2s ease infinite;
+}
+
+@keyframes animacia {
+	0% {
+		transform: rotate(0deg);
+	}
+	25% {
+		transform: rotate(15deg);
+	}
+    75% {
+		transform: rotate(-15deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+@keyframes animacia-reverse {
+	0% {
+		transform: rotate(0deg);
+	}
+	25% {
+		transform: rotate(-15deg);
+	}
+    75% {
+		transform: rotate(15deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+
+/* THANKS PHP HODNOTENIE */
+.gray{
+    background-color: #E0E0E0;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+.thx{
+    text-align: center;
+    padding: 50px 0 60px 0;
+    background-color: white;
+}
+.contact_action .content{
+    text-align: center;
+    padding: 0 20% 0 20%;
+    font-weight: bold;
+}
+.contact_action .content .nadpis{
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+.contact_action .content span{
+    margin-left: 10px;
+    font-weight: normal;
+}
+.contact_action .content p{
+    margin-bottom: 5px;
+}
