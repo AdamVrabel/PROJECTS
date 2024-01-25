@@ -1,4 +1,3 @@
-# NA TOMTO REPOZITÁRI SA PRÁVE PRACUJE ...
 # FIIT-STU 📚
 *Bakalárske štúdium 👨🏼‍🎓*
 
