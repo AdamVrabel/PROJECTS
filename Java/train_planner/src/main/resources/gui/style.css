@@ -1,0 +1,168 @@
+/* #F2F2F2 SVETLA */
+/* #0A0A0D TMAVA */
+/* #F29544 ORANDZOVA */
+
+/* TEXT FILL */
+/* -fx-fill: white; */
+
+.main_pane{
+    -fx-background-color: #F2F2F2;
+}
+.aside_pane{
+    -fx-background-color: #2d2f2f;
+}
+.aside_pane_darker{
+    -fx-background-color: #252626;
+}
+.darker{
+    -fx-background-color: #252626;
+}
+.buttonWhite{
+    -fx-border-style: solid inside;
+    -fx-border-width: 2;
+    -fx-border-insets: -3;
+    -fx-border-radius: 5;
+    -fx-border-color: #F2F2F2;
+}
+.buttonWhite:hover{
+    -fx-cursor: hand;
+}
+
+.ticketBLOCK {
+    -fx-border-style: solid outside;
+    -fx-border-width: 2;
+    -fx-border-insets: -3;
+    -fx-border-radius: 5;
+    -fx-border-color: #0A0A0D;
+    -fx-padding: 5px 15px;
+}
+.dynamic_ticketBlock{
+    -fx-border-style: solid outside;
+    -fx-border-width: 2;
+    -fx-border-insets: -3;
+    -fx-border-radius: 5;
+    -fx-border-color: #0A0A0D;
+    -fx-padding: 5px 15px;
+    /*-fx-background-color: #F29544;*/
+    /*-fx-background-color: #aaa;*/
+}
+.handCursor:hover{
+    -fx-cursor: hand;
+}
+
+.textINPUT{
+    -fx-font-family: "Arial Narrow";
+    -fx-font-size: 18px;
+}
+
+
+/*SEARCH PAGE CSS*/
+
+.backgroundImage{
+    -fx-background-image: url("../img/bg.png");
+    -fx-background-size: 1400 860;
+    -fx-background-position: center center;
+}
+.backgroundWhite{
+    -fx-background-color: rgba(255, 255, 255, 0.9);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.05), 8, 0.5, 3.5, 3.5);
+}
+.shadow{
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.05), 8, 0.5, 3.5, 3.5);
+}
+.backgroundDarkBlue{
+    -fx-background-color: #012A4A;
+}
+.darkBlueBorder{
+    -fx-border-style: solid outside;
+    -fx-border-width: 3;
+    -fx-border-radius: 10px;
+    -fx-border-color: #012A4A;
+
+}
+.rounded{
+    -fx-background-radius: 20px;
+}
+    /*PRE SEARCH INPUTY*/
+.formInputBox{
+    -fx-border-radius: 10px;
+    -fx-border-style: solid inside;
+    -fx-border-width: 3;
+    -fx-border-insets: -3;
+    -fx-border-color: #012A4A;
+}
+.text-field-search {
+    -fx-font-family: "Arial Black";
+    -fx-font-size: 18px;
+    -fx-prompt-text-fill: #012A4A;
+    -fx-background-color: rgba(247, 249, 253);
+    -fx-background-insets: 0;
+    -fx-cursor: text;
+    /*-fx-padding: 0.166667em 0em 0.333333em 0em;*/
+}
+
+.date-picker{
+    -fx-background-color: rgba(247, 249, 253);
+}
+.date-picker .arrow-button {
+    -fx-background-color: #012A4A;
+    -fx-background-radius: 0;
+}
+.date-picker .arrow-button:hover {
+    -fx-background-color: #012A4A;
+}
+.date-picker .arrow-button .arrow {
+    -fx-background-color: white;
+}
+.date-picker .cell {
+    -fx-background-color: rgba(247, 249, 253);
+}
+.date-picker .cell:hover {
+    -fx-background-color: #d1d1d1;
+}
+.date-picker .cell:focused {
+    -fx-background-color: #d1d1d1;
+}
+.date-picker .selected {
+    -fx-background-color: #012A4A;
+    -fx-text-fill: white;
+}
+.date-picker .selected:focused {
+    -fx-background-color: #012A4A;
+    -fx-text-fill: white;
+}
+.date-picker-popup  {
+    -fx-border-color: transparent;
+}
+.date-picker-popup .month-year-pane {
+    -fx-background-color: #012A4A;
+}
+.date-picker-popup .month-year-pane .label {
+    -fx-text-fill: rgba(247, 249, 253);
+}
+.date-picker-popup .week-number-cell {
+    -fx-text-fill: #012A4A;
+}
+.date-picker-popup .spinner .button .left-arrow,
+.date-picker-popup .spinner .button .right-arrow {
+    -fx-background-color: rgba(247, 249, 253);
+}
+
+.date-picker{
+    -fx-control-inner-background: rgba(247, 249, 253);
+    -fx-prompt-text-fill: red;
+}
+.date-picker .prompt-text {
+    -fx-text-fill: pink; /* nastavenie farby prompt textu */
+    -fx-background-color: pink;
+}
+
+
+.handCursor:hover{
+    -fx-cursor: hand;
+}
+
+.scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+

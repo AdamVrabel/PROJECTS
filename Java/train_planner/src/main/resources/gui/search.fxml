@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="860.0" prefWidth="1400.0" styleClass="backgroundImage" stylesheets="@style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Search">
+   <top>
+      <VBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="150.0" prefWidth="1400.0" BorderPane.alignment="CENTER_LEFT">
+         <children>
+            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="1400.0">
+               <styleClass>
+                  <String fx:value="backgroundWhite" />
+                  <String fx:value="rounded" />
+               </styleClass>
+               <children>
+                  <AnchorPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="300.0">
+                     <children>
+                        <ImageView fitWidth="75.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="46.0">
+                           <image>
+                              <Image url="@../img/TRAIN.png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="#012a4a" strokeType="OUTSIDE" strokeWidth="0.0" text="TRAIN" AnchorPane.leftAnchor="115.0" AnchorPane.topAnchor="35.0">
+                           <font>
+                              <Font name="Arial Black" size="28.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#012a4a" strokeType="OUTSIDE" strokeWidth="0.0" text="PLANNER" AnchorPane.leftAnchor="115.0" AnchorPane.topAnchor="62.0">
+                           <font>
+                              <Font name="Arial Black" size="28.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#012a4a" strokeType="OUTSIDE" strokeWidth="0.0" text="Buy cheap train ticket." AnchorPane.leftAnchor="115.0" AnchorPane.topAnchor="100.0">
+                           <font>
+                              <Font name="Arial Hebrew" size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="25.0" right="400.0" />
+                     </HBox.margin>
+                  </AnchorPane>
+                  <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="150.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <VBox fx:id="homeButton" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#clickHomeButton" prefHeight="150.0" prefWidth="125.0" styleClass="handCursor">
+                           <children>
+                              <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/circle/home.png" />
+                                 </image>
+                              </ImageView>
+                              <Text fill="#012a4a" strokeType="OUTSIDE" strokeWidth="0.0" text="HOME">
+                                 <font>
+                                    <Font name="Arial Bold" size="25.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="15.0" />
+                                 </VBox.margin>
+                              </Text>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="walletButton" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#clickWalletButton" prefHeight="150.0" prefWidth="140.0" styleClass="handCursor">
+                           <children>
+                              <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/circle/wallet.png" />
+                                 </image>
+                              </ImageView>
+                              <Text fill="#012a4a" strokeType="OUTSIDE" strokeWidth="0.0" text="WALLET">
+                                 <font>
+                                    <Font name="Arial Bold" size="25.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="15.0" />
+                                 </VBox.margin>
+                              </Text>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="profileButton" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#clickProfileButton" prefHeight="150.0" prefWidth="140.0" styleClass="handCursor">
+                           <children>
+                              <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/circle/person.png" />
+                                 </image>
+                              </ImageView>
+                              <Text fill="#012a4a" strokeType="OUTSIDE" strokeWidth="0.0" text="PROFILE">
+                                 <font>
+                                    <Font name="Arial Bold" size="25.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="15.0" />
+                                 </VBox.margin>
+                              </Text>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="logoutButton" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#clickLogoutButton" prefHeight="150.0" prefWidth="200.0" styleClass="handCursor">
+                           <children>
+                              <ImageView fitHeight="50.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/circle/logout.png" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Text fill="#012a4a" strokeType="OUTSIDE" strokeWidth="0.0" text="LOG OUT">
+                                 <font>
+                                    <Font name="Arial Bold" size="25.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="25.0" />
+                                 </VBox.margin>
+                              </Text>
+                           </children>
+                        </VBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets left="35.0" right="35.0" top="25.0" />
+         </BorderPane.margin>
+      </VBox>
+   </top>
+   <center>
+      <HBox minHeight="-Infinity" prefHeight="500.0" prefWidth="1400.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="35.0" left="35.0" right="35.0" top="30.0" />
+         </BorderPane.margin>
+         <children>
+            <VBox maxWidth="-Infinity" minWidth="-Infinity" prefWidth="700.0" stylesheets="@style.css">
+               <styleClass>
+                  <String fx:value="rounded" />
+                  <String fx:value="backgroundWhite" />
+               </styleClass>
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Text fill="#012a4a" strokeType="OUTSIDE" strokeWidth="0.0" text="Search for train route">
+                           <font>
+                              <Font name="Arial Black" size="22.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="50.0" />
+                           </HBox.margin>
+                        </Text>
+                        <Text fx:id="errorSearchText" fill="#941c1c" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="RIGHT" wrappingWidth="330.0">
+                           <font>
+                              <Font name="Arial Narrow" size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" right="50.0" top="5.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="200.0" styleClass="formInputBox">
+                     <VBox.margin>
+                        <Insets left="50.0" right="50.0" top="10.0" />
+                     </VBox.margin>
+                     <children>
+                        <ImageView fitHeight="60.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/from.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="25.0" right="25.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <TextField fx:id="FROM_input" maxHeight="40.0" maxWidth="450.0" minHeight="40.0" minWidth="450.0" prefHeight="40.0" prefWidth="450.0" promptText="From city" styleClass="text-field-search">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="60.0" layoutY="110.0" prefHeight="60.0" prefWidth="200.0" styleClass="formInputBox">
+                     <children>
+                        <ImageView fitHeight="60.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/to.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="25.0" right="25.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <TextField fx:id="TO_input" maxHeight="40.0" maxWidth="450.0" minHeight="40.0" minWidth="450.0" prefHeight="40.0" prefWidth="450.0" promptText="To city" styleClass="text-field-search">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="50.0" right="50.0" top="30.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="200.0" styleClass="formInputBox">
+                     <children>
+                        <ImageView fitHeight="60.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/date.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="25.0" right="25.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <DatePicker fx:id="datePicker" maxHeight="40.0" maxWidth="450.0" minHeight="40.0" minWidth="450.0" onAction="#getDate" prefHeight="40.0" prefWidth="450.0" promptText="Enter date">
+                           <styleClass>
+                              <String fx:value="text-field-search" />
+                              <String fx:value="jfx-text-field" />
+                           </styleClass></DatePicker>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="50.0" right="50.0" top="30.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="200.0" styleClass="formInputBox">
+                     <children>
+                        <ImageView fitHeight="60.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/clock.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="25.0" right="25.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <TextField fx:id="timeInput" maxHeight="40.0" maxWidth="450.0" minHeight="40.0" minWidth="103.0" prefHeight="40.0" prefWidth="103.0" promptText="10 : 00" styleClass="text-field-search">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                        <ImageView fitHeight="60.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/minus.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="60.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/plus.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="50.0" right="50.0" top="30.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox fx:id="searchBUTTON" alignment="CENTER" onMouseClicked="#searchRoute" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: #012A4A;">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="SEARCH" textAlignment="CENTER">
+                           <font>
+                              <Font name="Arial Black" size="22.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="100.0" right="100.0" top="45.0" />
+                     </VBox.margin>
+                     <styleClass>
+                        <String fx:value="formInputBox" />
+                        <String fx:value="handCursor" />
+                     </styleClass>
+                  </HBox>
+               </children>
+               
+            </VBox>
+            <ImageView fitHeight="384.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/searchImage.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="90.0" top="100.0" />
+               </HBox.margin>
+            </ImageView>
+         </children>
+      </HBox>
+   </center>
+</BorderPane>

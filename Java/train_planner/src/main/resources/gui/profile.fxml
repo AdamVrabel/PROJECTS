@@ -1,0 +1,689 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="860.0" prefWidth="1400.0" styleClass="backgroundImage" stylesheets="@style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Profile">
+   <top>
+      <VBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="150.0" prefWidth="1400.0" stylesheets="@style.css" BorderPane.alignment="CENTER_LEFT">
+         <children>
+            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="1400.0">
+               <styleClass>
+                  <String fx:value="backgroundWhite" />
+                  <String fx:value="rounded" />
+               </styleClass>
+               <children>
+                  <AnchorPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="300.0">
+                     <children>
+                        <ImageView fitWidth="75.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="46.0">
+                           <image>
+                              <Image url="@../img/TRAIN.png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="#012a4a" strokeType="OUTSIDE" strokeWidth="0.0" text="TRAIN" AnchorPane.leftAnchor="115.0" AnchorPane.topAnchor="35.0">
+                           <font>
+                              <Font name="Arial Black" size="28.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#012a4a" strokeType="OUTSIDE" strokeWidth="0.0" text="PLANNER" AnchorPane.leftAnchor="115.0" AnchorPane.topAnchor="62.0">
+                           <font>
+                              <Font name="Arial Black" size="28.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#012a4a" strokeType="OUTSIDE" strokeWidth="0.0" text="Buy cheap train ticket." AnchorPane.leftAnchor="115.0" AnchorPane.topAnchor="100.0">
+                           <font>
+                              <Font name="Arial Hebrew" size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="25.0" right="400.0" />
+                     </HBox.margin>
+                  </AnchorPane>
+                  <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="150.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <VBox fx:id="homeButton" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#clickHomeButton" prefHeight="150.0" prefWidth="125.0" styleClass="handCursor">
+                           <children>
+                              <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/circle/home.png" />
+                                 </image>
+                              </ImageView>
+                              <Text fill="#012a4a" strokeType="OUTSIDE" strokeWidth="0.0" text="HOME">
+                                 <font>
+                                    <Font name="Arial Bold" size="25.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="15.0" />
+                                 </VBox.margin>
+                              </Text>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="walletButton" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#clickWalletButton" prefHeight="150.0" prefWidth="140.0" styleClass="handCursor">
+                           <children>
+                              <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/circle/wallet.png" />
+                                 </image>
+                              </ImageView>
+                              <Text fill="#012a4a" strokeType="OUTSIDE" strokeWidth="0.0" text="WALLET">
+                                 <font>
+                                    <Font name="Arial Bold" size="25.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="15.0" />
+                                 </VBox.margin>
+                              </Text>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="profileButton" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#clickProfileButton" prefHeight="150.0" prefWidth="140.0" styleClass="handCursor">
+                           <children>
+                              <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/circle/person.png" />
+                                 </image>
+                              </ImageView>
+                              <Text fill="#012a4a" strokeType="OUTSIDE" strokeWidth="0.0" text="PROFILE">
+                                 <font>
+                                    <Font name="Arial Bold" size="25.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="15.0" />
+                                 </VBox.margin>
+                              </Text>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="logoutButton" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#clickLogoutButton" prefHeight="150.0" prefWidth="200.0" styleClass="handCursor">
+                           <children>
+                              <ImageView fitHeight="50.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/circle/logout.png" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Text fill="#012a4a" strokeType="OUTSIDE" strokeWidth="0.0" text="LOG OUT">
+                                 <font>
+                                    <Font name="Arial Bold" size="25.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="25.0" />
+                                 </VBox.margin>
+                              </Text>
+                           </children>
+                        </VBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets left="35.0" right="35.0" top="25.0" />
+         </BorderPane.margin>
+      </VBox>
+   </top>
+   <center>
+      <VBox maxWidth="-Infinity" minHeight="-Infinity" prefHeight="500.0" prefWidth="1400.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="25.0" left="35.0" right="35.0" top="25.0" />
+         </BorderPane.margin>
+         <children>
+            <HBox alignment="CENTER_LEFT" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="50.0" prefWidth="1400.0">
+               <children>
+                  <Text fx:id="USERNAME_TEXT" fill="#012a4a" strokeType="OUTSIDE" strokeWidth="0.0" text="USERNAME: ">
+                     <font>
+                        <Font name="Arial Bold" size="25.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="50.0" right="20.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="50.0" prefWidth="1400.0">
+               <children>
+                  <Text fill="#012a4a" strokeType="OUTSIDE" strokeWidth="0.0" text="TICKETS :">
+                     <font>
+                        <Font name="Arial Bold" size="25.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="50.0" right="20.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+            </HBox>
+            <ScrollPane maxWidth="1400.0" minWidth="1300.0" prefWidth="1400.0" style="-fx-background-color: transparent;">
+               <content>
+                  <VBox>
+                     <children>
+                        <FlowPane fx:id="ITEM_CONTAINER" alignment="CENTER" columnHalignment="CENTER" hgap="60.0" maxWidth="1300.0" minHeight="395.0" minWidth="1300.0" prefWidth="1300.0" prefWrapLength="500.0" vgap="30.0">
+                           <children>
+                              <BorderPane fx:id="STATIC_ITEM_1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="570.0">
+                                 <top>
+                                    <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="570.0" BorderPane.alignment="CENTER_LEFT">
+                                       <children>
+                                          <Text fill="#012a4a" strokeType="OUTSIDE" strokeWidth="0.0" text="SLOVAK RAILs" wrappingWidth="270.0">
+                                             <font>
+                                                <Font name="Arial Bold" size="30.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="30.0" top="25.0" />
+                                             </HBox.margin>
+                                          </Text>
+                                          <Text fill="#012a4a" strokeType="OUTSIDE" strokeWidth="0.0" text="from 120€" textAlignment="RIGHT" wrappingWidth="240.0">
+                                             <font>
+                                                <Font name="Arial Bold" size="30.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="30.0" top="25.0" />
+                                             </HBox.margin>
+                                          </Text>
+                                       </children>
+                                    </HBox>
+                                 </top>
+                                 <styleClass>
+                                    <String fx:value="backgroundWhite" />
+                                    <String fx:value="rounded" />
+                                 </styleClass>
+                                 <bottom>
+                                    <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="85.0" prefWidth="570.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <VBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefWidth="120.0">
+                                             <children>
+                                                <Text fill="#012a4a" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="mouse-moved" text="ECONOMY" textAlignment="CENTER" wrappingWidth="120.0">
+                                                   <font>
+                                                      <Font name="Arial Bold Italic" size="18.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets bottom="7.0" top="7.0" />
+                                                   </VBox.margin>
+                                                </Text>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" left="30.0" />
+                                             </HBox.margin>
+                                             <styleClass>
+                                                <String fx:value="darkBlueBorder" />
+                                                <String fx:value="mouse-moved" />
+                                             </styleClass>
+                                          </VBox>
+                                          <VBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefWidth="145.0">
+                                             <children>
+                                                <Text fill="#012a4a" strokeType="OUTSIDE" strokeWidth="0.0" text="FIRST CLASS" textAlignment="CENTER" wrappingWidth="145.0">
+                                                   <font>
+                                                      <Font name="Arial Bold Italic" size="18.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets bottom="7.0" top="7.0" />
+                                                   </VBox.margin>
+                                                </Text>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" left="20.0" />
+                                             </HBox.margin>
+                                             <styleClass>
+                                                <String fx:value="darkBlueBorder" />
+                                                <String fx:value="mouse-moved" />
+                                             </styleClass>
+                                          </VBox>
+                                          <VBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefWidth="135.0" style="-fx-background-radius: 10px;" styleClass="backgroundDarkBlue">
+                                             <children>
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="BUY TICKET" textAlignment="CENTER" wrappingWidth="130.0">
+                                                   <font>
+                                                      <Font name="Arial Bold Italic" size="18.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </Text>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" left="93.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </bottom>
+                                 <center>
+                                    <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="140.0" prefWidth="510.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <VBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="140.0" prefWidth="60.0">
+                                             <children>
+                                                <Text fill="#012a4a" strokeType="OUTSIDE" strokeWidth="0.0" text="13:00" wrappingWidth="70.0">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="24.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets top="20.0" />
+                                                   </VBox.margin>
+                                                </Text>
+                                                <Text fill="#012a4a" strokeType="OUTSIDE" strokeWidth="0.0" text="Bratislava" wrappingWidth="120.0">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="18.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets top="20.0" />
+                                                   </VBox.margin>
+                                                </Text>
+                                                <Text fill="#b6b6b6" strokeType="OUTSIDE" strokeWidth="0.0" text="Main station" wrappingWidth="120.0">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="14.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                </Text>
+                                             </children>
+                                          </VBox>
+                                          <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="140.0" prefWidth="180.0">
+                                             <children>
+                                                <Line endX="180.0" stroke="#b6b6b6" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="5.0" AnchorPane.topAnchor="33.0" />
+                                                <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" style="-fx-border-color: #b6b6b6; -fx-background-color: rgba(255, 255, 255, 0.9);" styleClass="darkBlueBorder" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="18.0">
+                                                   <children>
+                                                      <Text fill="#b6b6b6" strokeType="OUTSIDE" strokeWidth="0.0" text="3h 20min" textAlignment="CENTER" wrappingWidth="100.0">
+                                                         <font>
+                                                            <Font name="Arial Bold Italic" size="18.0" />
+                                                         </font>
+                                                      </Text>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </AnchorPane>
+                                          <VBox alignment="TOP_RIGHT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="140.0" prefWidth="60.0">
+                                             <children>
+                                                <Text fill="#012a4a" strokeType="OUTSIDE" strokeWidth="0.0" text="16:20" textAlignment="RIGHT" wrappingWidth="70.0">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="24.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets top="20.0" />
+                                                   </VBox.margin>
+                                                </Text>
+                                                <Text fill="#012a4a" strokeType="OUTSIDE" strokeWidth="0.0" text="Humenné" textAlignment="RIGHT" wrappingWidth="120.0">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="18.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets top="20.0" />
+                                                   </VBox.margin>
+                                                </Text>
+                                                <Text fill="#b6b6b6" strokeType="OUTSIDE" strokeWidth="0.0" text="Main station" textAlignment="RIGHT" wrappingWidth="120.0">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="14.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                </Text>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <BorderPane.margin>
+                                          <Insets left="30.0" right="30.0" />
+                                       </BorderPane.margin>
+                                    </HBox>
+                                 </center>
+                              </BorderPane>
+                              <BorderPane fx:id="STATIC_ITEM_2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="570.0">
+                                 <top>
+                                    <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="570.0" BorderPane.alignment="CENTER_LEFT">
+                                       <children>
+                                          <Text fill="#012a4a" strokeType="OUTSIDE" strokeWidth="0.0" text="SLOVAK RAILs" wrappingWidth="270.0">
+                                             <font>
+                                                <Font name="Arial Bold" size="30.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="30.0" top="25.0" />
+                                             </HBox.margin>
+                                          </Text>
+                                          <Text fill="#012a4a" strokeType="OUTSIDE" strokeWidth="0.0" text="from 120€" textAlignment="RIGHT" wrappingWidth="240.0">
+                                             <font>
+                                                <Font name="Arial Bold" size="30.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="30.0" top="25.0" />
+                                             </HBox.margin>
+                                          </Text>
+                                       </children>
+                                    </HBox>
+                                 </top>
+                                 <styleClass>
+                                    <String fx:value="backgroundWhite" />
+                                    <String fx:value="rounded" />
+                                 </styleClass>
+                                 <bottom>
+                                    <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="85.0" prefWidth="570.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <VBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefWidth="120.0">
+                                             <children>
+                                                <Text fill="#012a4a" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="mouse-moved" text="ECONOMY" textAlignment="CENTER" wrappingWidth="120.0">
+                                                   <font>
+                                                      <Font name="Arial Bold Italic" size="18.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets bottom="7.0" top="7.0" />
+                                                   </VBox.margin>
+                                                </Text>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" left="30.0" />
+                                             </HBox.margin>
+                                             <styleClass>
+                                                <String fx:value="darkBlueBorder" />
+                                                <String fx:value="mouse-moved" />
+                                             </styleClass>
+                                          </VBox>
+                                          <VBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefWidth="145.0">
+                                             <children>
+                                                <Text fill="#012a4a" strokeType="OUTSIDE" strokeWidth="0.0" text="FIRST CLASS" textAlignment="CENTER" wrappingWidth="145.0">
+                                                   <font>
+                                                      <Font name="Arial Bold Italic" size="18.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets bottom="7.0" top="7.0" />
+                                                   </VBox.margin>
+                                                </Text>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" left="20.0" />
+                                             </HBox.margin>
+                                             <styleClass>
+                                                <String fx:value="darkBlueBorder" />
+                                                <String fx:value="mouse-moved" />
+                                             </styleClass>
+                                          </VBox>
+                                          <VBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefWidth="135.0" style="-fx-background-radius: 10px;" styleClass="backgroundDarkBlue">
+                                             <children>
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="BUY TICKET" textAlignment="CENTER" wrappingWidth="130.0">
+                                                   <font>
+                                                      <Font name="Arial Bold Italic" size="18.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </Text>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" left="93.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </bottom>
+                                 <center>
+                                    <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="140.0" prefWidth="510.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <VBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="140.0" prefWidth="60.0">
+                                             <children>
+                                                <Text fill="#012a4a" strokeType="OUTSIDE" strokeWidth="0.0" text="13:00" wrappingWidth="70.0">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="24.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets top="20.0" />
+                                                   </VBox.margin>
+                                                </Text>
+                                                <Text fill="#012a4a" strokeType="OUTSIDE" strokeWidth="0.0" text="Bratislava" wrappingWidth="120.0">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="18.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets top="20.0" />
+                                                   </VBox.margin>
+                                                </Text>
+                                                <Text fill="#b6b6b6" strokeType="OUTSIDE" strokeWidth="0.0" text="Main station" wrappingWidth="120.0">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="14.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                </Text>
+                                             </children>
+                                          </VBox>
+                                          <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="140.0" prefWidth="180.0">
+                                             <children>
+                                                <Line endX="180.0" stroke="#b6b6b6" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="5.0" AnchorPane.topAnchor="33.0" />
+                                                <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" style="-fx-border-color: #b6b6b6; -fx-background-color: rgba(255, 255, 255, 0.9);" styleClass="darkBlueBorder" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="18.0">
+                                                   <children>
+                                                      <Text fill="#b6b6b6" strokeType="OUTSIDE" strokeWidth="0.0" text="3h 20min" textAlignment="CENTER" wrappingWidth="100.0">
+                                                         <font>
+                                                            <Font name="Arial Bold Italic" size="18.0" />
+                                                         </font>
+                                                      </Text>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </AnchorPane>
+                                          <VBox alignment="TOP_RIGHT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="140.0" prefWidth="60.0">
+                                             <children>
+                                                <Text fill="#012a4a" strokeType="OUTSIDE" strokeWidth="0.0" text="16:20" textAlignment="RIGHT" wrappingWidth="70.0">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="24.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets top="20.0" />
+                                                   </VBox.margin>
+                                                </Text>
+                                                <Text fill="#012a4a" strokeType="OUTSIDE" strokeWidth="0.0" text="Humenné" textAlignment="RIGHT" wrappingWidth="120.0">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="18.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets top="20.0" />
+                                                   </VBox.margin>
+                                                </Text>
+                                                <Text fill="#b6b6b6" strokeType="OUTSIDE" strokeWidth="0.0" text="Main station" textAlignment="RIGHT" wrappingWidth="120.0">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="14.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                </Text>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <BorderPane.margin>
+                                          <Insets left="30.0" right="30.0" />
+                                       </BorderPane.margin>
+                                    </HBox>
+                                 </center>
+                              </BorderPane>
+                              <BorderPane fx:id="STATIC_ITEM_11" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="570.0">
+                                 <top>
+                                    <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="570.0" BorderPane.alignment="CENTER_LEFT">
+                                       <children>
+                                          <Text fill="#012a4a" strokeType="OUTSIDE" strokeWidth="0.0" text="SLOVAK RAILs" wrappingWidth="270.0">
+                                             <font>
+                                                <Font name="Arial Bold" size="30.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="30.0" top="25.0" />
+                                             </HBox.margin>
+                                          </Text>
+                                          <Text fill="#012a4a" strokeType="OUTSIDE" strokeWidth="0.0" text="from 120€" textAlignment="RIGHT" wrappingWidth="240.0">
+                                             <font>
+                                                <Font name="Arial Bold" size="30.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="30.0" top="25.0" />
+                                             </HBox.margin>
+                                          </Text>
+                                       </children>
+                                    </HBox>
+                                 </top>
+                                 <styleClass>
+                                    <String fx:value="backgroundWhite" />
+                                    <String fx:value="rounded" />
+                                 </styleClass>
+                                 <bottom>
+                                    <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="85.0" prefWidth="570.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <VBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefWidth="120.0">
+                                             <children>
+                                                <Text fill="#012a4a" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="mouse-moved" text="ECONOMY" textAlignment="CENTER" wrappingWidth="120.0">
+                                                   <font>
+                                                      <Font name="Arial Bold Italic" size="18.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets bottom="7.0" top="7.0" />
+                                                   </VBox.margin>
+                                                </Text>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" left="30.0" />
+                                             </HBox.margin>
+                                             <styleClass>
+                                                <String fx:value="darkBlueBorder" />
+                                                <String fx:value="mouse-moved" />
+                                             </styleClass>
+                                          </VBox>
+                                          <VBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefWidth="145.0">
+                                             <children>
+                                                <Text fill="#012a4a" strokeType="OUTSIDE" strokeWidth="0.0" text="FIRST CLASS" textAlignment="CENTER" wrappingWidth="145.0">
+                                                   <font>
+                                                      <Font name="Arial Bold Italic" size="18.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets bottom="7.0" top="7.0" />
+                                                   </VBox.margin>
+                                                </Text>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" left="20.0" />
+                                             </HBox.margin>
+                                             <styleClass>
+                                                <String fx:value="darkBlueBorder" />
+                                                <String fx:value="mouse-moved" />
+                                             </styleClass>
+                                          </VBox>
+                                          <VBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefWidth="135.0" style="-fx-background-radius: 10px;" styleClass="backgroundDarkBlue">
+                                             <children>
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="BUY TICKET" textAlignment="CENTER" wrappingWidth="130.0">
+                                                   <font>
+                                                      <Font name="Arial Bold Italic" size="18.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </Text>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" left="93.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </bottom>
+                                 <center>
+                                    <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="140.0" prefWidth="510.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <VBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="140.0" prefWidth="60.0">
+                                             <children>
+                                                <Text fill="#012a4a" strokeType="OUTSIDE" strokeWidth="0.0" text="13:00" wrappingWidth="70.0">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="24.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets top="20.0" />
+                                                   </VBox.margin>
+                                                </Text>
+                                                <Text fill="#012a4a" strokeType="OUTSIDE" strokeWidth="0.0" text="Bratislava" wrappingWidth="120.0">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="18.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets top="20.0" />
+                                                   </VBox.margin>
+                                                </Text>
+                                                <Text fill="#b6b6b6" strokeType="OUTSIDE" strokeWidth="0.0" text="Main station" wrappingWidth="120.0">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="14.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                </Text>
+                                             </children>
+                                          </VBox>
+                                          <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="140.0" prefWidth="180.0">
+                                             <children>
+                                                <Line endX="180.0" stroke="#b6b6b6" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="5.0" AnchorPane.topAnchor="33.0" />
+                                                <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" style="-fx-border-color: #b6b6b6; -fx-background-color: rgba(255, 255, 255, 0.9);" styleClass="darkBlueBorder" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="18.0">
+                                                   <children>
+                                                      <Text fill="#b6b6b6" strokeType="OUTSIDE" strokeWidth="0.0" text="3h 20min" textAlignment="CENTER" wrappingWidth="100.0">
+                                                         <font>
+                                                            <Font name="Arial Bold Italic" size="18.0" />
+                                                         </font>
+                                                      </Text>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </AnchorPane>
+                                          <VBox alignment="TOP_RIGHT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="140.0" prefWidth="60.0">
+                                             <children>
+                                                <Text fill="#012a4a" strokeType="OUTSIDE" strokeWidth="0.0" text="16:20" textAlignment="RIGHT" wrappingWidth="70.0">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="24.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets top="20.0" />
+                                                   </VBox.margin>
+                                                </Text>
+                                                <Text fill="#012a4a" strokeType="OUTSIDE" strokeWidth="0.0" text="Humenné" textAlignment="RIGHT" wrappingWidth="120.0">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="18.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets top="20.0" />
+                                                   </VBox.margin>
+                                                </Text>
+                                                <Text fill="#b6b6b6" strokeType="OUTSIDE" strokeWidth="0.0" text="Main station" textAlignment="RIGHT" wrappingWidth="120.0">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="14.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                </Text>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <BorderPane.margin>
+                                          <Insets left="30.0" right="30.0" />
+                                       </BorderPane.margin>
+                                    </HBox>
+                                 </center>
+                              </BorderPane>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </FlowPane>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

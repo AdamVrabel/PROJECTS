@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1025.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.AfterLogin">
+   <left>
+      <GridPane prefHeight="720.0" prefWidth="350.0" styleClass="aside_pane" stylesheets="@style.css" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="100.0" minHeight="100.0" prefHeight="100.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="230.0" minHeight="230.0" prefHeight="230.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="627.1605911254883" minHeight="10.0" prefHeight="318.5248718261719" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="75.0" minHeight="75.0" prefHeight="75.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <HBox alignment="CENTER" onMouseClicked="#doClick" prefHeight="100.0" style="-fx-cursor: hand;" styleClass="aside_pane_darker" stylesheets="@style.css">
+               <children>
+                  <ImageView fitHeight="62.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/trainLogo.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Text fill="#f29544" strokeType="OUTSIDE" strokeWidth="0.0" text="Train PLANNER">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="30.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+               <children>
+                  <ImageView fitHeight="87.0" fitWidth="92.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/person_color.png" />
+                     </image>
+                  </ImageView>
+                  <Text fx:id="welcomeText" fill="#f2f2f2" strokeType="OUTSIDE" strokeWidth="0.0" text="Hello !">
+                     <font>
+                        <Font name="Arial Bold Italic" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Text>
+                  <Text fx:id="nameText" fill="#f29544" strokeType="OUTSIDE" strokeWidth="0.0">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </Text>
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefWidth="350.0" GridPane.rowIndex="2">
+               <children>
+                  <Line endX="257.8814392089844" stroke="#f2f2f2" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="3.0">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </Line>
+                  <HBox fx:id="ticketsButton" alignment="CENTER" onMouseClicked="#doTicketsButton" prefHeight="50.0" prefWidth="150.0" styleClass="buttonWhite" stylesheets="@style.css">
+                     <children>
+                        <ImageView fitHeight="109.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/tickets.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets bottom="5.0" right="15.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Text fx:id="welcomeText2" fill="#f2f2f2" strokeType="OUTSIDE" strokeWidth="0.0" text="TICKETS" underline="true">
+                           <font>
+                              <Font name="Arial Bold Italic" size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="7.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="80.0" right="80.0" top="25.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="3.0" top="3.0" />
+                     </padding>
+                  </HBox>
+                  <HBox fx:id="moneysButton" alignment="CENTER" onMouseClicked="#doMoneysButton" prefHeight="50.0" prefWidth="150.0" styleClass="buttonWhite" stylesheets="@style.css">
+                     <children>
+                        <ImageView fitHeight="109.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/euro.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="18.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Text fx:id="welcomeText21" fill="#f2f2f2" strokeType="OUTSIDE" strokeWidth="0.0" text="MONEY">
+                           <font>
+                              <Font name="Arial Bold Italic" size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                     <padding>
+                        <Insets bottom="3.0" top="3.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="22.0" left="80.0" right="80.0" top="22.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox fx:id="settingsButton" alignment="CENTER" onMouseClicked="#doSettingsButton" prefHeight="50.0" prefWidth="150.0" styleClass="buttonWhite" stylesheets="@style.css">
+                     <children>
+                        <ImageView fitHeight="109.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/settings.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Text fx:id="welcomeText211" fill="#f2f2f2" strokeType="OUTSIDE" strokeWidth="0.0" text="SETTINGS">
+                           <font>
+                              <Font name="Arial Bold Italic" size="20.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <padding>
+                        <Insets bottom="3.0" top="3.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="25.0" left="80.0" right="80.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Line endX="257.8814392089844" stroke="#f2f2f2" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="3.0">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Line>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="75.0" GridPane.rowIndex="3">
+               <children>
+                  <Button fx:id="logoutButton" mnemonicParsing="false" onAction="#logout" prefHeight="40.0" prefWidth="101.0" style="-fx-background-color: #F29544; -fx-cursor: hand;" text="LOG OUT" textAlignment="CENTER">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </GridPane>
+   </left>
+   <center>
+      <GridPane prefHeight="720.0" prefWidth="664.0" styleClass="main_pane" stylesheets="@style.css" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="200.0" minHeight="200.0" prefHeight="200.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="400.0" minHeight="400.0" prefHeight="400.0" vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <HBox minWidth="400.0" prefHeight="200.0" prefWidth="400.0">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="350.0" spacing="5.0">
+                     <children>
+                        <TextField fx:id="FROM_input" maxWidth="300.0" prefWidth="300.0" promptText="From city or station" styleClass="textINPUT" stylesheets="@style.css">
+                           <font>
+                              <Font name="Arial Narrow" size="18.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </TextField>
+                        <TextField fx:id="TO_input" maxWidth="300.0" prefWidth="300.0" promptText="To city or station" styleClass="textINPUT" stylesheets="@style.css">
+                           <font>
+                              <Font name="Arial Narrow" size="18.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="50.0" top="40.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox layoutX="60.0" layoutY="10.0" prefHeight="200.0" prefWidth="350.0" spacing="5.0">
+                     <children>
+                        <DatePicker fx:id="datePicker" onAction="#getDate" promptText="Enter a date" styleClass="textINPUT" stylesheets="@style.css" />
+                        <Button fx:id="search1" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#search" prefHeight="26.0" prefWidth="98.0" style="-fx-background-color: #0A0A0D;" text="SEARCH" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Black" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <VBox.margin>
+                              <Insets left="129.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                     <HBox.margin>
+                        <Insets top="40.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+            <ScrollPane hbarPolicy="NEVER" maxWidth="664.0" minHeight="100.0" minWidth="664.0" prefHeight="400.0" prefWidth="664.0" styleClass="main_pane" stylesheets="@style.css" vbarPolicy="ALWAYS" GridPane.rowIndex="1">
+               <content>
+                  <VBox fx:id="routesContainer" maxWidth="664.0" minHeight="100.0" minWidth="664.0" prefWidth="664.0">
+                     <padding>
+                        <Insets left="50.0" right="50.0" />
+                     </padding>
+                     <children>
+                        <GridPane fx:id="STATIC_TICKET_PRINT1" styleClass="ticketBLOCK" stylesheets="@style.css">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" />
+                              <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="25.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="25.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="25.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <VBox.margin>
+                              <Insets bottom="20.0" top="20.0" />
+                           </VBox.margin>
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="DATE:  2023-04-08" wrappingWidth="180.0">
+                                 <font>
+                                    <Font name="Arial Black" size="13.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="FROM:  Bratislava" wrappingWidth="180.0" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Arial Black" size="13.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="TO:  Košice" wrappingWidth="180.0" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="Arial Black" size="13.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="DEPARTURE:  12:00" wrappingWidth="180.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Arial Black" size="13.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ARRIVAL:  15:00" wrappingWidth="180.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="Arial Black" size="13.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="BUY TICKET" underline="true" wrappingWidth="109.16015625" GridPane.columnIndex="2">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="18.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </GridPane>
+                        <GridPane fx:id="STATIC_TICKET_PRINT2" layoutX="60.0" layoutY="35.0" styleClass="ticketBLOCK" stylesheets="@style.css">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" />
+                              <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="25.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="25.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="25.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="DATE:  2023-04-08" wrappingWidth="180.0">
+                                 <font>
+                                    <Font name="Arial Black" size="13.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="FROM:  Bratislava" wrappingWidth="180.0" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Arial Black" size="13.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="TO:  Košice" wrappingWidth="180.0" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="Arial Black" size="13.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="DEPARTURE:  12:00" wrappingWidth="180.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Arial Black" size="13.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ARRIVAL:  15:00" wrappingWidth="180.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="Arial Black" size="13.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="BUY TICKET" underline="true" wrappingWidth="109.16015625" GridPane.columnIndex="2">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="18.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="20.0" top="20.0" />
+                           </VBox.margin>
+                        </GridPane>
+                        <GridPane fx:id="STATIC_TICKET_PRINT3" layoutX="60.0" layoutY="35.0" styleClass="ticketBLOCK" stylesheets="@style.css">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" />
+                              <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="25.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="25.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="25.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="DATE:  2023-04-08" wrappingWidth="180.0">
+                                 <font>
+                                    <Font name="Arial Black" size="13.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="FROM:  Bratislava" wrappingWidth="180.0" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Arial Black" size="13.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="TO:  Košice" wrappingWidth="180.0" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="Arial Black" size="13.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="DEPARTURE:  12:00" wrappingWidth="180.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Arial Black" size="13.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ARRIVAL:  15:00" wrappingWidth="180.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="Arial Black" size="13.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="BUY TICKET" underline="true" wrappingWidth="109.16015625" GridPane.columnIndex="2">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="18.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="20.0" top="20.0" />
+                           </VBox.margin>
+                        </GridPane>
+                        <GridPane fx:id="STATIC_TICKET_PRINT4" layoutX="60.0" layoutY="305.0" styleClass="ticketBLOCK" stylesheets="@style.css">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" />
+                              <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="25.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="25.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="25.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="DATE:  2023-04-08" wrappingWidth="180.0">
+                                 <font>
+                                    <Font name="Arial Black" size="13.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="FROM:  Bratislava" wrappingWidth="180.0" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Arial Black" size="13.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="TO:  Košice" wrappingWidth="180.0" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="Arial Black" size="13.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="DEPARTURE:  12:00" wrappingWidth="180.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Arial Black" size="13.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ARRIVAL:  15:00" wrappingWidth="180.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="Arial Black" size="13.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="BUY TICKET" underline="true" wrappingWidth="109.16015625" GridPane.columnIndex="2">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="18.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="20.0" top="20.0" />
+                           </VBox.margin>
+                        </GridPane>
+                     </children>
+                  </VBox>
+               </content>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </ScrollPane>
+         </children>
+      </GridPane>
+   </center>
+</BorderPane>
