@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="description" content="Hra ARKANOID - PROJEKT ZTIAPL">
+    <meta name="keywords" content="HTML, CSS, JavaScript, hra, ARKANOID">
+    <meta name="author" content="Adam Vrabel">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZTIAPL - HRA</title>
+
+    <!--FAV ICONS-->
+    <link type="image/png" sizes="16x16" rel="icon" href="images/favicon/icon16.png">
+    <link type="image/png" sizes="32x32" rel="icon" href="images/favicon/icon32.png">
+    <link type="image/png" sizes="96x96" rel="icon" href="images/favicon/icon96.png">
+
+    <!-- FONT SOURCE CODE PRO-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <!-- FONT CHAU PHILOMENE ONE-->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <link href="https://fonts.googleapis.com/css2?family=Chau+Philomene+One:ital@0;1&display=swap" rel="stylesheet">
+
+    <!-- jQuery CDN -->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script> -->
+
+    <!-- moje CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        // EKVIVALENT document.ready() v jQuery
+        //document.addEventListener("DOMContentLoaded", function(event) { // POCKA POKIAL SA NACITA CELA STRANKA 
+            //document.getElementById('element').style.display = 'none';
+            
+        //});
+
+        // POMOCOU jQuery počkám kým sa načíta celá stránka až potom vykonávam
+        //jQuery(document).ready(function(){            
+            // jQuery('#hra').hide();
+            // jQuery('#nieco').hide();
+            // jQuery('#nieco').fadeIn(1000).fadeOut(1000);
+            // jQuery('#hra').delay(3000).fadeIn(500);
+
+            // jQuery('#main').hide();
+            // jQuery('#hra').hide();
+            // jQuery('#nieco').hide();
+
+            // jQuery('#main').fadeIn(2000);
+            
+        //});
+    </script>
+
+    <!-- KLIKANIE NA BUTTONY -->
+    <script src="js/clickButtons.js" type="text/javascript"></script>
+    <!-- HUDBA A ZVUKY -->
+    <script src="js/audio.js" type="text/javascript"></script>
+    <!-- CANVAS -->
+    <script src="js/canvas.js" type="text/javascript"></script>
+
+</head>
+<body>
+    <div class="pozadie">
+
+        <div id="audio">
+            <audio id="music" loop>
+                <source src="sounds/background.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <div id="main">
+            <h1>Arkanoid</h1>
+            <button onclick="mainPlay()">Hrať <img class="icon" src="images/icons/play.png" alt=""></button>
+            <div class="buttons">
+                <button onclick="mainSettings()">Nastavenia</button>
+                <button onclick="mainHowTo()">Ako hrať hru</button>
+            </div>
+            
+        </div>
+        
+        <div id="narocnosti">
+            <h2>Arkanoid</h2>
+            <p>vyberte náročnosť</p>
+
+            <div class="buttons">
+                <!-- 
+                <button class="playMusic" id="narocnosti0" onclick="narocnostiGame(0)">ľahká</button>
+                <button class="playMusic" id="narocnosti1" onclick="narocnostiGame(1)">stredná</button>
+                <button class="playMusic" id="narocnosti2" onclick="narocnostiGame(2)">ťažká</button>
+                -->
+                <button id="narocnosti0" onclick="narocnostiGame(0)">ľahká</button>
+                <button id="narocnosti1" onclick="narocnostiGame(1)">stredná</button>
+                <button id="narocnosti2" onclick="narocnostiGame(2)">ťažká</button>
+            </div>
+            <div class="btnIcon">
+                <button onclick="narocnostiBack()"><img class="icon" src="images/icons/back.png" alt=""></button>
+                <button onclick="narocnostiSettings()"><img class="icon" src="images/icons/settings.png" alt=""></button>
+            </div>
+        </div>
+
+        <div id="settings">
+            <h2>Arkanoid</h2>
+            <p>nastavenia</p>
+            <button onclick="settingsToMenu()">menu</button>
+            <div class="btnIcon">
+                <button class="playMusic" onclick=""><img id="musicIcon1" class="icon" src="images/icons/nomusic.png" alt=""></button>
+                <button class="playSounds" onclick=""><img id="soundIcon1" class="icon" src="images/icons/nosound.png" alt=""></button>
+            </div>
+            <button onclick="settingsToMenu()">Späť <img class="icon" src="images/icons/back.png" alt=""></button>
+        </div>
+
+        <div id="howToPlay">
+            <h2>Arkanoid</h2>
+            <p class="nadpis">ako hrať hru</p>
+            <p class="small">ovládanie plavidla je umožňené do strán</p>
+
+            <div class="box">
+                <div class="box-item">
+                    <img class="first" src="images/icons/arrows.png" alt="">
+                    <p>Šípka vľavo / šípka vpravo</p>
+                    <p class="bold">klávesnica</p>
+                </div>
+                <div class="box-item">
+                    <img class="second" src="images/icons/mouse.png" alt="">
+                    <p>pohyb vľavo / pohyb vpravo</p>
+                    <p class="bold">myš</p>
+                </div>
+            </div>
+            <button onclick="howToPlayBack()">Späť <img class="icon" src="images/icons/back.png" alt=""></button>
+        </div>
+
+        <div id="hra">
+
+            <div class="top">
+                <h2>ARKANOID</h2>
+                <div class="zivoty" id="zivoty">
+                    <!-- 
+                    <img src="images/icons/srdce.png" alt="">
+                    <img src="images/icons/srdce.png" alt="">
+                    <img src="images/icons/srdce.png" alt="">
+                    -->
+                </div>
+                <p id="score">skóre</p>
+            </div>
+    
+            <canvas width="480" height="320"></canvas>
+
+            <div class="btnIcon">
+                <button class="playMusic" onclick=""><img id="musicIcon2" class="icon" src="images/icons/nomusic.png" alt=""></button>
+                <button id="skonci" class="" onclick="pauza()">PAUZA</button>
+                <button class="playSounds" onclick=""><img id="soundIcon2" class="icon" src="images/icons/nosound.png" alt=""></button>
+            </div>
+
+        </div>
+
+        <div id="stratenie_zivota">
+            <h2>ARKANOID</h2>
+            <h3>stratil si život</h3>
+            <p class="skore">Aktualne skore: <span id="score2"></span></p>
+
+            <div class="zivoty" id="zivoty2">
+                
+                <!-- <img src="images/icons/srdce.png" alt="">
+                <img src="images/icons/srdce.png" alt="">
+                <img src="images/icons/srdce.png" alt=""> -->
+               
+            </div>
+            <div class="buttons">
+                <button id="strateny_zivot_znovu" onclick="">ZNOVU</button>
+                <button id="strateny_zivot_narocnosti" onclick="">NÁROČNOSŤ</button>
+            </div>
+        </div>
+
+        <div id="game_over">
+            <h2>ARKANOID</h2>
+            <h3>Koniec hry</h3>
+            <p>stratil si všetky životy</p>
+            <p class="skore">skóre <span id="score3"></span></p>
+
+            <button onclick="game_overToMenu()">MENU</button>
+        </div>
+
+        <div id="pauza">
+            <p>PAUZA</p>
+        </div>
+        
+
+        <div id="nieco">
+            <h2>Tu sa bude diať niečo vážne zaujímavé ...</h2>
+            <img id="GameOverImage" src="images/GameOverImg.png" alt="gameoverimage">
+        </div>
+
+        <p id="autor">FIIT STU<br>Adam Vrabeľ</p>
+    </div>
+    
+</body>
+</html>
